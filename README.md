@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HFT Algorithm Research</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        /* 导航按钮样式 */
+        .nav-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 5px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 内容区块样式 */
+        .content-section {
+            display: none;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .content-section:target {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        /* 结论子菜单 */
+        .sub-menu {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #conclusion:target .sub-menu {
+            display: block;
+        }
+
+        .sub-button {
+            background: var(--accent);
+            padding: 8px 16px;
+            margin: 3px;
+        }
+
+        /* 颜色方案 */
+        #introduction { border-left: 4px solid #1abc9c; }
+        #overview { border-left: 4px solid #f1c40f; }
+        #strategies { border-left: 4px solid #9b59b6; }
+        #conclusion { border-left: 4px solid #e74c3c; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-button {
+                display: block;
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: var(--primary); text-align: center;">HFT Algorithm Research</h1>
+
+    <!-- 导航按钮 -->
+    <a href="#introduction" class="nav-button">Introduction</a>
+    <a href="#overview" class="nav-button">Overview</a>
+    <a href="#strategies" class="nav-button">Key Strategies</a>
+    <a href="#conclusion" class="nav-button">Conclusion</a>
+
+    <!-- 内容区块 -->
+    <div id="introduction" class="content-section">
+        <h2>Introduction</h2>
+        <p>Content for introduction section...</p>
+    </div>
+
+    <div id="overview" class="content-section">
+        <h2>Overview</h2>
+        <p>Content for overview section...</p>
+    </div>
+
+    <div id="strategies" class="content-section">
+        <h2>Key Strategies</h2>
+        <p>Content for trading strategies...</p>
+    </div>
+
+    <div id="conclusion" class="content-section">
+        <h2>Conclusion</h2>
+        <div class="sub-menu">
+            <a href="#conclusion-a" class="nav-button sub-button">A. Summary</a>
+            <a href="#conclusion-b" class="nav-button sub-button">B. Innovation</a>
+            <a href="#conclusion-c" class="nav-button sub-button">C. Future</a>
+        </div>
+
+        <div id="conclusion-a" class="content-section">
+            <h3>A. Summary of Key Points</h3>
+            <p>Detailed content for summary...</p>
+        </div>
+
+        <div id="conclusion-b" class="content-section">
+            <h3>B. Balancing Innovation</h3>
+            <p>Detailed content about regulation...</p>
+        </div>
+
+        <div id="conclusion-c" class="content-section">
+            <h3>C. Future Outlook</h3>
+            <p>Content about quantum computing...</p>
+        </div>
+    </div>
+</body>
+</html>
